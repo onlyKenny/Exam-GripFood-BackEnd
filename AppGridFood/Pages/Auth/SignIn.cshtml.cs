@@ -1,4 +1,4 @@
-using BelajarNextJsBackEnd.Entities;
+using GripFoodBackEnd.Entities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -42,7 +42,7 @@ namespace BelajarNextJsBackEnd.Pages.Auth
                 return Page();
             }
 
-            var user = await _db.Accounts.AsNoTracking()
+            var user = await _db.Users.AsNoTracking()
                 .Where(Q => Q.Email == Form.Email)
                 .FirstOrDefaultAsync(cancellationToken);
 

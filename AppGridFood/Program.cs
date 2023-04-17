@@ -27,7 +27,8 @@ builder.Services.AddAuthentication()
         options.LogoutPath = "/connect/logout";
     });
 
-builder.Services.AddAuthorization(options => {
+builder.Services.AddAuthorization(options =>
+{
     options.AddPolicy("api", p =>
     {
         p.AddAuthenticationSchemes(OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme);

@@ -37,7 +37,7 @@ namespace AppGridFood.Controllers
             }).ToListAsync();
         }
 
-        GET: api/Restaurants/5
+        //GET: api/Restaurants/5
         [HttpGet("{id}", Name = "MenuList")]
         public async Task<ActionResult<List<MenuListModel>>> GetRestaurant(string id)
         {
